@@ -1,0 +1,19 @@
+{
+  "name": "accounts_manager",
+  "version": "1.0.0",
+  "description": "A local application to maintain daily expense, income, investments and savings.",
+  "main": "88",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Raamprasaadh/accounts_manager.git"
+  },
+  "author": "Ram",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/Raamprasaadh/accounts_manager/issues"
+  },
+  "homepage": "https://github.com/Raamprasaadh/accounts_manager#readme"
+}
