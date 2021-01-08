@@ -20,10 +20,14 @@ function App() {
           <h3>Add Transaction</h3>
             <label>Date</label>
             {/* Date picker*/}
-            <input/>
+            <input type="date" placeholder ="YYYY-MM-DD"/>
             <label>Type of Transaction</label>
-            {/*Dropdown */}
-            <input/>
+            <select value="Select">
+            <option value="expense-business">Expense Business</option>
+            <option value="expense-personal">Expense Personal</option>
+            <option value="income">Income</option>
+            <option value="investment">Investment</option>
+            Select</select>
             <label>Subtype</label>
             {/*Dropdown */}
             <input/>
