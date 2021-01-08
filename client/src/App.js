@@ -30,6 +30,9 @@ function App() {
             <label>Amount</label>
             {/*only numerical/decimal */}
             <input/>
+            <label>Reason</label>
+            {/*only numerical/decimal */}
+            <input/>
         </div>
       </div>
     </div>      
