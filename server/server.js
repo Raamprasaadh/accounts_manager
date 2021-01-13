@@ -19,8 +19,11 @@ mongoose.connect(uri,{useNewUrlParser:true,useCreateIndex:true})
 .catch((err)=>console.error(err)
 );
 
+const accountsRoute = require('./routes/accounts');
+const typesRoute = require('./routes/types');
 
-
+app.use('/accounts', accountsRoute);
+app.use('/types',typesRoute);
 
 app.listen(port,()=>{
     console.log(`server is running on port:${port} `);

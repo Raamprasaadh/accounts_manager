@@ -4,7 +4,7 @@ const Schema = mongoose.Schema;
 
 const accountsSchema = new Schema({
     date:{
-        type:date,
+        type: Date,
         required:true
     },
     accounts_type:{
@@ -29,6 +29,6 @@ const accountsSchema = new Schema({
     timestamps:true
 });
 
-const Accounts = mongoose.model(accounts, accountsSchema);
+const Accounts = mongoose.model('accounts', accountsSchema);
 
 module.exports = Accounts;
