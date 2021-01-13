@@ -2,7 +2,7 @@
   "name": "server",
   "version": "1.0.0",
   "description": "Server to act as an interface between the client and database of the accounts_manager application.",
-  "main": "index.js",
+  "main": "server.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
