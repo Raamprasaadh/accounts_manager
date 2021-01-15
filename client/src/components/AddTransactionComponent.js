@@ -30,7 +30,7 @@ export default class AddTransactionComponent extends Component {
         axios.get("http://localhost:3001/types")
         .then(res=>{
             if(res){
-                this.setState({types:res.data.map(type => type.name)})
+                this.setState({types:res.data.map(type => type.name), type:'select'})
                 }
         }
             );
@@ -47,8 +47,18 @@ export default class AddTransactionComponent extends Component {
             type:e.target.value
         });
         var url = "http://localhost:3001/types/"
-        var urlExt = e.target.value.toLowerCase();
-        console.log(url+urlExt);
+        var urlExt = e.target.value.toLowerCase().replace(' ', '-');
+        axios.get(url+urlExt)
+        .then(res=>{
+            if(res.data.length >0)
+            {
+                this.setState({
+                    subTypes:res.data.map((subtype=>subtype.name))
+                })
+            }
+            console.log(this.state.subTypes);
+        })
+        .catch()
     };
     onChangeSubType(e){
         this.setState({
@@ -76,6 +86,7 @@ export default class AddTransactionComponent extends Component {
             amount : this.state.amount,
             reason : this.state.reason
         }
+        
         console.log( transaction);
     }
 
@@ -96,7 +107,7 @@ export default class AddTransactionComponent extends Component {
                     className="formControl"
                      value={this.state.type}
                      onChange={this.onChangeType}>
-                        
+                        <option>select</option>
                     {
                         this.state.types.map(function(type){
                             return <option key = {type}
@@ -110,10 +121,11 @@ export default class AddTransactionComponent extends Component {
                     <div className="formGroup">
                     <label>Subtype : </label>
                     {/*Dropdown */}
-                    <select /*required*/
+                    <select required
                     className="formControl" 
                     value = {this.state.subType}
                     onChange={this.onChangeSubType}>
+                        <option>select</option>
                         {
                             this.state.subTypes.map(function(subType){
                                 return <option key = {subType} 
