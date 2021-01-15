@@ -14,7 +14,7 @@ const accountsSchema = new Schema({
     },
     sub_type:{
         type:String,
-        required:true,
+        //required:true,
         minlength:6
     },
     amount:{

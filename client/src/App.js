@@ -2,6 +2,8 @@ import './App.css';
 import NavBar from '../src/components/NavBarComponent';
 import AddTxn from '../src/components/AddTransactionComponent';
 import ViewTxn from '../src/components/ViewTransactionsComponent';
+
+
 import {BrowserRouter as Router, Route, Switch} from "react-router-dom";
 function App() {
   return (
